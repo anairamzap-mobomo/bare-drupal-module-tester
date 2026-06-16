@@ -1,0 +1,10 @@
+#!/bin/bash
+
+docker run \
+  --rm \
+  --workdir /var/www \
+  -v $(pwd):/var/www \
+  --user "$(id -u):$(id -g)" \
+  composer:latest \
+  composer "$@" --ignore-platform-reqs
+
