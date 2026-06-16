@@ -13,7 +13,8 @@ make init-drupal
 ```
 If no parameters are passed Drupal 11.3.x-dev will be used.
 
-You can change the Drupal version passing `--DRUPAL_VERSION="11.4"` for example.
+You can change the Drupal version passing `make init-drupal DRUPAL_VERSION="11.4"` for example.
+
 3. Init the ddev project 
 ```
 make init-ddev
@@ -23,3 +24,5 @@ make init-ddev
 make start
 ```
 5. Install the module/s you want to test. For example: `cd drupal-tester && ddev composer require 'drupal/pathauto:^1.15'`
+
+**NOTE**: To run composer or drush you must always cd into the `drupal-tester` module. That's where the drupal project is :)
