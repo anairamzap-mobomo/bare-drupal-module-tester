@@ -26,3 +26,7 @@ make start
 5. Install the module/s you want to test. For example: `cd drupal-tester && ddev composer require 'drupal/pathauto:^1.15'`
 
 **NOTE**: To run composer or drush you must always cd into the `drupal-tester` module. That's where the drupal project is :)
+
+6. You can access as drupal admin with the admin/admin user password combination.
+
+You can change it with `ddev drush uli`
