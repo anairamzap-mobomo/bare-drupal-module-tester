@@ -22,3 +22,25 @@ start: ## Starts the ddev project and installs drush, admin_toolbar and drupal c
 		ddev drush cr && ddev launch; \
 	fi
 
+##############################################
+# Development tools (xdebug, drupal dev mode).
+##############################################
+debug-on: # Turn on xdebug
+	@echo "Enabling XDebug"
+	ddev xdebug on
+
+debug-off: # Turn off xdebug
+	@echo "Disabling XDebug"
+	ddev xdebug off
+
+debug-mode: # Display the current mode
+	ddev xdebug status
+
+dev-mode-on: # Enables development mode disabling cache layers and enabling twig debug.
+	@echo "Enabling development mode"
+	ddev drush theme:dev on
+
+dev-mode-off: # Disables development mode.
+	@echo "Disabling development mode"
+	ddev drush theme:dev off
+
